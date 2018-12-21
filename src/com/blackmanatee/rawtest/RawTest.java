@@ -1,4 +1,5 @@
 package com.blackmanatee.rawtest;
+import java.io.*;
 
 public class RawTest {
 	private static boolean pass;
@@ -32,5 +33,10 @@ public class RawTest {
 	public void startPhase(String p) {
 		resetTest();
 		echo("Begin phase: "+p);
+	}
+	
+	public boolean treeEquals(File ay, File b){
+		//compare files and subfolders for equality
+		return false;
 	}
 }
