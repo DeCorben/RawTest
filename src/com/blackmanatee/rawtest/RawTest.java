@@ -3,9 +3,11 @@ package com.blackmanatee.rawtest;
 public class RawTest {
 	private static boolean pass;
 	private static int testNum;
+	protected static int threshold = 1;
 	
-	public static void echo(String e) {
-		System.out.println(e);
+	public static void echo(String e, int t) {
+		if(t < threshold)
+			System.out.println(e);
 	}
 	
 	public void check(boolean b) {
@@ -14,9 +16,9 @@ public class RawTest {
 	
 	public void test() {
 		if(pass)
-			echo("Test number "+testNum+": passed");
+			echo("Test number "+testNum+": passed",0);
 		else
-			echo("Test number "+testNum+": failed");
+			echo("Test number "+testNum+": failed",0);
 		testNum++;
 		resetTest();
 	}
@@ -31,6 +33,6 @@ public class RawTest {
 	
 	public void startPhase(String p) {
 		resetTest();
-		echo("Begin phase: "+p);
+		echo("Begin phase: "+p,0);
 	}
 }
