@@ -7,6 +7,7 @@ public class RawTest {
 	protected static int threshold = 1;
 	
 	public static void echo(String e, int t) {
+		//an echo that only prints if the test fails
 		if(t < threshold)
 			System.out.println(e);
 	}
@@ -17,9 +18,9 @@ public class RawTest {
 	
 	public void test() {
 		if(pass)
-			echo("Test number "+testNum+": passed",0);
+			echo("Test number "+testNum+":\t\t\t\tpassed",0);
 		else
-			echo("Test number "+testNum+": failed",0);
+			echo("Test number "+testNum+":\t\t\t\tfailed",0);
 		testNum++;
 		resetTest();
 	}
