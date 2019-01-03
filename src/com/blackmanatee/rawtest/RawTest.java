@@ -8,7 +8,7 @@ public class RawTest {
 	
 	public static void echo(String e, int t) {
 		//an echo that only prints if the test fails
-		if(t < threshold)
+		if(t == 0 || t > threshold)
 			System.out.println(e);
 	}
 	
